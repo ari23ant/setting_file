@@ -21,6 +21,10 @@ if dein#load_state('C:\freeware\vim82-kaoriya-win64\vimfiles\bundles')
     " 好きなプラグインを dein#add() 追加していく
     "call dein#add('好きなプラグイン')
 
+    " カラースキーム
+    call dein#add('tomasr/molokai')
+    call dein#add('w0ng/vim-hybrid')
+
     " vimステータスバーのデザイン
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
@@ -144,6 +148,7 @@ nnoremap : ;
 " --- Display --- "
 " vim.exeで反映される
 "colorscheme desert
+"colorscheme hybrid
 "set background=dark
 colorscheme molokai
 syntax on           " シンタックスカラーリングを設定する

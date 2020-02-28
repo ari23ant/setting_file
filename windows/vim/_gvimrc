@@ -2,6 +2,7 @@
 
 " --- Display --- "
 "colorscheme desert
+"colorscheme hybrid
 "set background=dark
 colorscheme molokai
 syntax on           " シンタックスカラーリングを設定する
