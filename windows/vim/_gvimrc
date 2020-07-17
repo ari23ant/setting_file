@@ -16,3 +16,4 @@ set laststatus=2    " ステータスラインを常に表示する
 set guifont=Ricty_Diminished:h12:cSHIFTJIS  " フォントをRicty_Diminishedに
 set rop=type:directx      " Ricty_Diminishedできれいに表示する
 set langmenu=ja_jp.utf-8  " UTF-8設定
+set visualbell t_vb=      " Beep音無効
