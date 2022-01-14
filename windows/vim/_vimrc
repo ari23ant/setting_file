@@ -29,12 +29,13 @@ if dein#load_state('C:\freeware\vim82-kaoriya-win64\vimfiles\bundles')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
 
-    " markdown形式用プラグイン
-    call dein#add('plasticboy/vim-markdown')
-    call dein#add('kannokanno/previm')
-    call dein#add('tyru/open-browser.vim')
+    " vim-tmux間の移動
+    call dein#add('christoomey/vim-tmux-navigator')
 
+    " Julia-lang
+    call dein#add('JuliaEditorSupport/julia-vim')
     " --- プラグイン追加 ここまで ---- "
+
     call dein#end()
     call dein#save_state()
 endif
@@ -56,26 +57,6 @@ nmap <C-n> <Plug>AirlineSelectNextTab
 " ステータスのフォントとテーマ
 let g:airline_powerline_fonts = 1
 let g:airline_theme='luna'
-
-" ------- markdown用プラグイン設定 ここから ------- "
-" --- plasticboy/vim-markdown --- "
-" 折りたたみの禁止
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_auto_insert_bullets = 0
-let g:vim_markdown_new_list_item_indent = 0
-
-" --- kannokanno/previm --- "
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-let g:previm_open_cmd = 'C:\\PROGRA~1\\MOZILL~1\\firefox.exe'
-"let g:previm_open_cmd = 'C:\\PROGRA~2\\Google\\Chrome\\Application\\chrome.exe'
-" ctrl pでプレビュー
-"nnoremap <silent> <C-p> :PrevimOpen<CR>
-
-" --- tyru/open-browser.vim --- "
-let g:netrw_nogx = 1 " disable netrw's gx mapping.
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
-" ------- markdown用プラグイン設定 ここまで ------- "
 
 " ------- 以下詳細設定 ------- "
 " --- Encode ---"
@@ -115,13 +96,6 @@ set softtabstop=4   " expandtabで<Tab>が対応する<Space>の数
 set backspace=indent,eol,start  " BackSpace機能を使えるようにする
 set whichwrap=b,s,h,l,<,>,[,]   " カーソルを行頭、行末で止まらないようにする
 set clipboard=unnamed           " クリップボードを利用する
-
-" --- 挿入モードでのカーソル移動 --- "
-" 'Ctr-*'でコマンドモードと同じ移動をする
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
 
 " --- 空白文字を表示 --- "
 set list    " タブ、行末等の不可視文字を表示する
